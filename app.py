@@ -1,8 +1,9 @@
+from flask import Flask
 import datetime
 import dash
 from dash.dependencies import Input, Output, State
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 import json
 import requests
 import dash_bootstrap_components as dbc
@@ -15,7 +16,8 @@ gfonts = {
 chriddyp = 'https://codepen.io/chriddyp/pen/bWLwgP.css'
 external_stylesheets = [dbc.themes.BOOTSTRAP]
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = Flask(__name__)
+app = dash.Dash(__name__, server= server, external_stylesheets=external_stylesheets)
 
 navbar = dbc.Navbar(
     dbc.Row([

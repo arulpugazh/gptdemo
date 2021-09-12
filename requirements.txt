@@ -1,3 +1,4 @@
+flask
 dash
 dash-bootstrap-components
 requests
