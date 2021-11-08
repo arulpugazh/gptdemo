@@ -7,6 +7,9 @@ from dash import html
 import json
 import requests
 import dash_bootstrap_components as dbc
+import os
+
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 
 gfonts = {
     'href': 'https://fonts.googleapis.com/css2?family=Satisfy&display=swap',
@@ -162,7 +165,7 @@ def ask_gpt(prompt):
         "presence_penalty": 0.5
     })
     headers = {
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer '+ OPENAI_API_KEY,
         'Content-Type': 'application/json'
     }
 
