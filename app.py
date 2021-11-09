@@ -228,7 +228,7 @@ def simplify_gpt(prompt):
         'stop': ["\n"]
     })
     headers = {
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer '+ OPENAI_API_KEY,
         'Content-Type': 'application/json'
     }
 
